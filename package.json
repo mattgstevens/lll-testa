@@ -1,0 +1,20 @@
+{
+  "name": "lll-testa",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "compile": "lllc --hex contracts/identity.lll > contracts/identity.hex",
+    "compile:assembly": "lllc --assembly contracts/identity.lll",
+    "deploy": "node src/deploy",
+    "testrpc": "testrpc"
+  },
+  "devDependencies": {
+    "ethereumjs-testrpc": "^4.1.3",
+    "prettier": "^1.7.0",
+    "solc": "^0.4.16"
+  },
+  "dependencies": {
+    "web3": "^0.20.1"
+  }
+}

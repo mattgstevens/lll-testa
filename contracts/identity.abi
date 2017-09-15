@@ -1,0 +1,5 @@
+pragma solidity ^0.4.0;
+
+contract IdentityFunction {
+  function identity (uint256 input) constant returns (uint256);
+}
