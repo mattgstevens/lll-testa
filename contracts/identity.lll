@@ -1,6 +1,10 @@
 (seq
   (def 'scratch 0x00)
-  (def 'identity 0xac37eebb) ; why this hex?
+  ; why this hex?
+  ; a function's ID is derived as the first four bytes of the Keccak hash of the ASCII form of the
+  ; ABI signature. In this case "identity(uint256)"
+  ; can use online tool https://emn178.github.io/online-tools/keccak_256.html
+  (def 'identity 0xac37eebb)
   (def 'function (function-hash code-body)
     (when (= (div (calldataload 0x00) (exp 2 224)) function-hash)
       code-body))
